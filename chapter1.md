@@ -17,7 +17,7 @@ Você também pode executar comandos em R diretamente no console. É uma boa man
 - Adicione uma linha de código que calcule a soma de 6 e 12, e pressione o botão 'Submit Answer'.
 
 *** =hint
-Simplismente adicione uma linha de R que calcule a soma de 6 e 12, igual ao exemplo na amostra de código!
+Simplesmente adicione uma linha de R que calcule a soma de 6 e 12, igual ao exemplo na amostra de código!
 
 *** =pre_exercise_code
 ```{r}
@@ -49,7 +49,7 @@ success_msg("Fantástico! Vê como o console mostra o resultado do código em R 
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:720745eda5
-## Aritimética com R
+## Aritmética com R
 
 Na sua forma mais básica, o R pode ser usado como uma simples calculadora. Veja os seguinte operadores aritiméticos:
 
@@ -58,22 +58,22 @@ Na sua forma mais básica, o R pode ser usado como uma simples calculadora. Veja
 - Multiplicação: `*`
 - Divisão: `/`
 - Exponenciação: `^`
-- Módulo: `%%` ###CONFERIR TRADUÇÃO
+- Restante: `%%`
 
-The last two might need some explaining:
-- The `^` operator raises the number to its left to the power of the number to its right: for example `3^2` is 9.
-- The modulo returns the remainder of the division of the number to the left by the number on its right, for example 5 modulo 3 or `5 %% 3` is 2.
+Estes dois últimos talvez demandem alguma explicação:
+- O operador `^` eleva o número à sua esquerda à potencia do número à sua direita: por exemplo `3^2` é 9.
+- O restante retorna o resto da divisão do número à sua esquerda pelo número à direita, por exemplo: o restante de 5 por 3, ou `5 %% 3` é 2.
 
-With this knowledge, follow the instructions below to complete the exercise.
+Com este conhecimento, siga as instruções abaixo para completar o exercício.
 
 *** =instructions
-- Type `2^5` in the editor to calculate 2 to the power 5.
-- Type `28 %% 6` to calculate 28 modulo 6.
-- Click 'Submit Answer' and have a look at the R output in the console.
-- Note how the `#` symbol is used to add comments on the R code.
+- Digite `2^5` no editor para calcular 2 elevado à quinta potência.
+- Digite `28 %% 6` para calcular o restante da divisão de 28 por 6.
+- Clique em 'Submit Answer' e olhe o resultado no que o R imprime no console.
+- Note como o símbolo `#` é usado para adicionar comentários ao código em R.
 
 *** =hint
-Another example of the modulo operator: `9 %% 2` equals `1`.
+Outro exemplo do operador restante: `9 %% 2` é igual a `1`.
 
 *** =pre_exercise_code
 ```{r}
@@ -82,52 +82,52 @@ Another example of the modulo operator: `9 %% 2` equals `1`.
 
 *** =sample_code
 ```{r}
-# An addition
+# Uma adição
 5 + 5 
 
-# A subtraction
+# Uma subtração
 5 - 5 
 
-# A multiplication
+# Uma multiplicação
 3 * 5
 
- # A division
+ # Uma divisão
 (5 + 5) / 2 
 
-# Exponentiation
+# Exponenciação
 
 
-# Modulo
+# Restante
 
 ```
 
 *** =solution
 ```{r}
-# An addition
+# Uma adição
 5 + 5
 
-# A subtraction
+# Uma subtração
 5 - 5 
 
-# A multiplication
+# Uma multiplicação
 3 * 5
 
- # A division
+# Uma divisão
 (5 + 5) / 2 
 
-# Exponentiation
+# Exponenciação
 2 ^ 5
 
-# Modulo
+# Restante
 28 %% 6
 ```
 
 *** =sct
 ```{r}
-msg = "Do not remove the other arithmetic examples!"
-test_output_contains("2^5", incorrect_msg = "The exponentiation example is not correct. Write `2 ^ 5` on a new line.")
-test_output_contains("28 %% 6", incorrect_msg = "There seems to be an issue with the modulo example. Write `28 %% 6` on a new line.")
-success_msg("Great! Head over to the next exercise.")
+msg = "Não remova os outros exemplos de aritmética!"
+test_output_contains("2^5", incorrect_msg = "O exemplo de exponenciação não está correto. Escreva `2 ^ 5` em uma linha nova.")
+test_output_contains("28 %% 6", incorrect_msg = "Parece haver um problema no exemplo que calcula o restante. Escreva `28 %% 6` em uma nova linha.")
+success_msg("Ótimo! Siga adiante para o próximo exercício.")
 ```
 
 

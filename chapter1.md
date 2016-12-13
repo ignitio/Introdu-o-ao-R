@@ -12,12 +12,12 @@ O R utiliza o sinal `#` para adicionar comentários para que você outros possam
 
 Você também pode executar comandos em R diretamente no console. É uma boa maneira de experimentar o código em R, enquanto a correção da sua submissão ainda não foi verificada.
 
-*** =instruções
+*** =instructions
 - No editor à direita já há uma amostra de código. Você consegue ver quais linhas são código em R e quais são comentários?
 - Adicione uma linha de código que calcule a soma de 6 e 12, e pressione o botão 'Submit Answer'.
 
 *** =hint
-Just add a line of R code that calculates the sum of 6 and 12, just like the example in the sample code!
+Simplismente adicione uma linha de R que calcule a soma de 6 e 12, igual ao exemplo na amostra de código!
 
 *** =pre_exercise_code
 ```{r}
@@ -26,39 +26,39 @@ Just add a line of R code that calculates the sum of 6 and 12, just like the exa
 
 *** =sample_code
 ```{r}
-# Calculate 3 + 4
+# Calcule 3 + 4
 3 + 4
 
-# Calculate 6 + 12
+# Calcule 6 + 12
 
 ```
 
 *** =solution
 ```{r}
-# Calculate 3 + 4
+# Calcule 3 + 4
 3 + 4
 
-# Calculate 6 + 12
+# Calcule 6 + 12
 6 + 12
 ```
 
 *** =sct
 ```{r}
-test_output_contains("18", incorrect_msg = "Make sure to add `6 + 12` on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
-success_msg("Awesome! See how the console shows the result of the R code you submitted? Now that you're familiar with the interface, let's get down to R business!")
+test_output_contains("18", incorrect_msg = "Certifique-se de colocar `6 + 12` em uma nova linha. Não comece a linha com `#`, senão o seu código em R não será executado!")
+success_msg("Fantástico! Vê como o console mostra o resultado do código em R que você submeteu? Agora que você já está familiarizado com a interface, vamos entrar nesse negócio de R!")
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:720745eda5
-## Arithmetic with R
+## Aritimética com R
 
-In its most basic form, R can be used as a simple calculator. Consider the following arithmetic operators:
+Na sua forma mais básica, o R pode ser usado como uma simples calculadora. Veja os seguinte operadores aritiméticos:
 
-- Addition: `+`
-- Subtraction: `-`
-- Multiplication: `*`
-- Division: `/`
-- Exponentiation: `^`
-- Modulo: `%%`
+- Adição: `+`
+- Subtração: `-`
+- Multiplicação: `*`
+- Divisão: `/`
+- Exponenciação: `^`
+- Módulo: `%%` ###CONFERIR TRADUÇÃO
 
 The last two might need some explaining:
 - The `^` operator raises the number to its left to the power of the number to its right: for example `3^2` is 9.

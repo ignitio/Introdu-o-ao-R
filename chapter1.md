@@ -182,17 +182,17 @@ success_msg("Bom trabalho! Você notou que o R não mostra no console o valor de
 
 
 --- type:NormalExercise xp:100 skills:1 key:c5944b90eb
-## Variable assignment (2)
+## Atribuição de Variável (2)
 
-Suppose you have a fruit basket with five apples. As a data analyst in training, you want to store the number of apples in a variable with the name `my_apples`. 
+Suponha que você tem uma cesta com cinco maçãs. Como um analista de dados em treinamento, você quer armazenar o número de maçãs em uma variável com o nome `maças_minhas`. 
 
 *** =instructions
-- Type the following code in the editor: `my_apples <- 5`. This will assign the value 5 to `my_apples`.
-- Type: `my_apples` below the second comment. This will print out the value of `my_apples`.
-- Click 'Submit Answer', and look at the console: you see that the number 5 is printed. So R now links the variable `my_apples` to the value 5.
+- Digite o seguinte código no editor: `maças_minhas <- 5`. Isto atribuirá o valor 5 a `maças_minhas`.
+- Digite: `maças_minhas` abaixo do segundo comentário. Isso mostrará no console o valor de `maças_minhas`.
+- Clique em 'Submit Answer', e olhe para o console: você verá que o número 5 foi impresso. Assim R conecta a variável `maças_minhas` ao valor 5.
 
 *** =hint
-Remember that if you want to assign a number or an object to a variable in R, you can make use of the assignment operator `<-`. Alternatively, you can use `=`, but `<-` is widely preferred in the R community.
+Lembre-se que se você quer atribuir um número ou um objeto a uma variável em R, você pode usar o operador de atribuição `<-`. Como alternativa, você pode usar o `=`, mas `<-` é amplamente preferido pela comunidade de usuários do R.
 
 *** =pre_exercise_code
 ```{r}
@@ -201,34 +201,34 @@ Remember that if you want to assign a number or an object to a variable in R, yo
 
 *** =sample_code
 ```{r}
-# Assign the value 5 to the variable my_apples
+# Atribua o valor 5 à variável maças_minhas
 
 
-# Print out the value of the variable my_apples
+# Imprima o valor da variável maças_minhas
 
 ```
 
 *** =solution
 ```{r}
-# Assign the value 5 to the variable my_apples
-my_apples <- 5
+# Atribua o valor 5 à variável maças_minhas
+maças_minhas <- 5
 
-# Print out the value of the variable my_apples
-my_apples
+# Imprima o valor da variável maças_minhas
+maças_minhas
 ```
 
 *** =sct
 ```{r}
-test_object("my_apples", 
-            undefined_msg = "Please make sure to define a variable `my_apples`.",
-            incorrect_msg = "Make sure that you assign the correct value to `my_apples`.")
-test_output_contains("my_apples", incorrect_msg = "Have you explicitly told R to print out the `my_apples` variable to the console?")
-success_msg("Great! Continue to the next exercise!")
+test_object("maças_minhas", 
+            undefined_msg = "Por favor assegure-se de definir `maças_minhas`.",
+            incorrect_msg = "Assegure-se de que você atribuiu o valor correto a `maças_minhas`.")
+test_output_contains("maças_minhas", incorrect_msg = "Você disse explicitamente ao R para imprimir a variável `maças_minhas`no console?")
+success_msg("Ótimo! Continue para o próximo exercício!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:1c1bd25045
-## Variable assignment (3)
+## Atribuição de Variável (3)
 
 Every tasty fruit basket needs oranges, so you decide to add six oranges. As a data analyst, your reflex is to immediately create the variable `my_oranges` and assign the value 6 to it. Next, you want to calculate how many pieces of fruit you have in total. Since you have given meaningful names to these values, you can now code this in a clear way: 
 

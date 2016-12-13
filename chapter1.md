@@ -6,15 +6,15 @@ description : "Neste capítulo, você dará seus primeiros passos no R. Você ir
 --- type:NormalExercise xp:100 skills:1 key:15d729634a
 ## Como Funciona
 
-No editor à direita você deve digitar o código em R para resolver os exercícios. When you hit the 'Submit Answer' button, every line of code is interpreted and executed by R and you get a message whether or not your code was correct. The output of your R code is shown in the console in the lower right corner.
+No editor à direita você deve digitar o código em R para resolver os exercícios. Quando você pressiona o botão 'Submit Answer', cada linha de código é interpretada e executada pelo R e você recebe uma mensagem dizendo se seu código está correto ou não. O resultado de seu código em R é mostrado no console no canto inferior direito.
 
-R makes use of the `#` sign to add comments, so that you and others can understand what the R code is about. Just like Twitter! Comments are not run as R code, so they will not influence your result. For example, _Calculate 3 + 4_ in the editor on the right is a comment.
+O R utiliza o sinal `#` para adicionar comentários para que você outros possam entender sobre o que é o código. Igual ao Twitter! Comentários não são executados como código, assim eles não influenciam seu resultado. Por exemplo, _Calcule 3 + 4_ no editor à direita é um comentário.
 
-You can also execute R commands straight in the console. This is a good way to experiment with R code, as your submission is not checked for correctness.
+Você também pode executar comandos em R diretamente no console. É uma boa maneira de experimentar o código em R, enquanto a correção da sua submissão ainda não foi verificada.
 
-*** =instructions
-- In the editor on the right there is already some sample code. Can you see which lines are actual R code and which are comments?
-- Add a line of code that calculates the sum of 6 and 12, and hit the 'Submit Answer' button.
+*** =instruções
+- No editor à direita já há uma amostra de código. Você consegue ver quais linhas são código em R e quais são comentários?
+- Adicione uma linha de código que calcule a soma de 6 e 12, e pressione o botão 'Submit Answer'.
 
 *** =hint
 Just add a line of R code that calculates the sum of 6 and 12, just like the example in the sample code!

@@ -1,20 +1,20 @@
 --- 
 title_meta  : Chapter 2
-title       : Vectors
-description : "In this free R course, we'll take you on a trip to Vegas, where you will learn how to analyze your gambling results using vectors in R! After completing this chapter, you will be able to create vectors in R, name them, select elements from them and compare different vectors."
+title       : Vetores
+description : "Neste curso gratuito de R, nós levaremos você numa viagem a Las Vegas, onde você aprenderá a analisar os resultados das suas apostas utilizando vetores em R! Depois de completar este capítulo, você estará apto a criar vetores em R, nomea-los, selecionar elementos deles e compara-los com vetores diferentes."
 
 --- type:NormalExercise xp:100 skills:1 key:d9b453dbdd
-## Create a vector
+## Crie um vetor
 
-Feeling lucky? You better, because this chapter takes you on a trip to the City of Sins, also known as *Statisticians Paradise*!
+Está se sentindo com sorte? Tomara que sim, porque este capítulo leva você numa viagem à Cidade do Pecado, também conhecida como *Paraíso dos Estatísticos*!
 
-Thanks to R and your new data-analytical skills, you will learn how to uplift your performance at the tables and fire off your career as a professional gambler. This chapter will show how you can easily keep track of your betting progress and how you can do some simple analyses on past actions. Next stop, Vegas Baby... VEGAS!!
+Graças ao R e às suas novas habilidades de análise de dados, você aprenderá como aprimorar sua performance nas mesas de jogo e como incendiar sua carreira de apostador profissional. Este capítulo mostrará como você pode facilmente registrar o progresso de suas apostas e como você pode fazer algumas análises simples sobre as suas ações passadas. Próxima parada, Vegas Baby... VEGAS!!
 
 *** =instructions
-- Do you still remember what you have learned in the first chapter? Assign the value `"Go!"` to the variable `vegas`. Remember: R is case sensitive!
+- Você ainda lembra do que aprendemos no primeiro capítulo? Atribua o valor `"Go!"` à variável `vegas`. Lembre-se: R é sensível à caixa ALTA ou baixa!
 
 *** =hint
-Just type the following line in the editor:
+Só digite a seguinte linha no editor:
 ```
 vegas <- "Go!"
 ```
@@ -26,18 +26,18 @@ vegas <- "Go!"
 
 *** =sample_code
 ```{r}
-# Define the variable vegas
+# Defina a variável vegas
 vegas <- 
 ```
 
 *** =solution
 ```{r}
-# Define the variable vegas
+# Defina a variável vegas
 vegas <- "Go!"
 ```
 
 *** =sct
 ```{r}
-test_object("vegas", incorrect_msg = "Make sure that you assign the correct value to `vegas`. Do not forget that R is case sensitive!")
-success_msg("Great! Head over to the next exercise.")
+test_object("vegas", incorrect_msg = "Certifique-se de que você atribuiu o valor correto a `vegas`. Não esqueça que o R é sensível à caixa ALTA ou baixa!")
+success_msg("Ótimo! Vá adiante para o próximo exercício.")
 ```

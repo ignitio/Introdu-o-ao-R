@@ -1,7 +1,15 @@
 title            : Introdu o ao R
 instructors      :
- - ignitio@gmail.com
-description      : This is an automatically generated demo course which will help you on your way to create an awesome DataCamp course.
-university       : DataCamp
-difficulty_level : 2
-time_needed      : 1 hour
+ - jonathan+author@datacamp.com
+- ignitio@gmail.com
+time_needed: 4 hours
+difficulty_level: 1
+description: "Nesta introdução ao R, você aprenderá o básico desta bela linguagem 
+  de código aberto, incluido fatores, listas e data frames. Com o conhecimento
+  adquirido neste curso, você estará pronto para enfrentar seu primeira análise de dados.
+  Com mais de 2 milhões de usuários ao redor do mundo, R está se tornando rapidamente a principal 
+  linguagem de programação em estatística e ciência de dados. A cada ano, o número de usuários de R 
+  cresce 40% e um número cada vez maior de organizações o utilizam nas suas atividades diárias.
+  Aumente o poder do R completando hoje este curso gratuito online!"
+chapters:
+ 

@@ -184,12 +184,12 @@ success_msg("Bom trabalho! Você notou que o R não mostra no console o valor de
 --- type:NormalExercise xp:100 skills:1 key:c5944b90eb
 ## Atribuição de Variável (2)
 
-Suponha que você tem uma cesta com cinco maçãs. Como um analista de dados em treinamento, você quer armazenar o número de maçãs em uma variável com o nome `maças_minhas`. 
+Suponha que você tem uma cesta com cinco maçãs. Como um analista de dados em treinamento, você quer armazenar o número de maçãs em uma variável com o nome `minhas_maças`. 
 
 *** =instructions
-- Digite o seguinte código no editor: `maças_minhas <- 5`. Isto atribuirá o valor 5 a `maças_minhas`.
-- Digite: `maças_minhas` abaixo do segundo comentário. Isso mostrará no console o valor de `maças_minhas`.
-- Clique em 'Submit Answer', e olhe para o console: você verá que o número 5 foi impresso. Assim R conecta a variável `maças_minhas` ao valor 5.
+- Digite o seguinte código no editor: `minhas_maças <- 5`. Isto atribuirá o valor 5 a `minhas_maças`.
+- Digite: `minhas_maças` abaixo do segundo comentário. Isso mostrará no console o valor de `minhas_maças`.
+- Clique em 'Submit Answer', e olhe para o console: você verá que o número 5 foi impresso. Assim R conecta a variável `minhas_maças` ao valor 5.
 
 *** =hint
 Lembre-se que se você quer atribuir um número ou um objeto a uma variável em R, você pode usar o operador de atribuição `<-`. Como alternativa, você pode usar o `=`, mas `<-` é amplamente preferido pela comunidade de usuários do R.
@@ -201,28 +201,28 @@ Lembre-se que se você quer atribuir um número ou um objeto a uma variável em 
 
 *** =sample_code
 ```{r}
-# Atribua o valor 5 à variável maças_minhas
+# Atribua o valor 5 à variável minhas_maças
 
 
-# Imprima o valor da variável maças_minhas
+# Imprima o valor da variável minhas_maças
 
 ```
 
 *** =solution
 ```{r}
-# Atribua o valor 5 à variável maças_minhas
-maças_minhas <- 5
+# Atribua o valor 5 à variável minhas_maças
+minhas_maças <- 5
 
-# Imprima o valor da variável maças_minhas
-maças_minhas
+# Imprima o valor da variável minhas_maças
+minhas_maças
 ```
 
 *** =sct
 ```{r}
-test_object("maças_minhas", 
-            undefined_msg = "Por favor assegure-se de definir `maças_minhas`.",
-            incorrect_msg = "Assegure-se de que você atribuiu o valor correto a `maças_minhas`.")
-test_output_contains("maças_minhas", incorrect_msg = "Você disse explicitamente ao R para imprimir a variável `maças_minhas`no console?")
+test_object("minhas_maças", 
+            undefined_msg = "Por favor assegure-se de definir `minhas_maças`.",
+            incorrect_msg = "Assegure-se de que você atribuiu o valor correto a `minhas_maças`.")
+test_output_contains("minhas_maças", incorrect_msg = "Você disse explicitamente ao R para imprimir a variável `minhas_maças`no console?")
 success_msg("Ótimo! Continue para o próximo exercício!")
 ```
 
@@ -230,19 +230,19 @@ success_msg("Ótimo! Continue para o próximo exercício!")
 --- type:NormalExercise xp:100 skills:1 key:1c1bd25045
 ## Atribuição de Variável (3)
 
-Every tasty fruit basket needs oranges, so you decide to add six oranges. As a data analyst, your reflex is to immediately create the variable `my_oranges` and assign the value 6 to it. Next, you want to calculate how many pieces of fruit you have in total. Since you have given meaningful names to these values, you can now code this in a clear way: 
+Todas as cestas de frutas deliciosas têm laranjas. Por isso você decide adicionar seis laranjas. Como analista de dados, seu reflexo é imediatamente criar a variável `minhas_laranjas` e atribuir o valor 6 a ela. A seguir, você quer calcular quantas unidades de fruta você tem no total. Como você deu nomes significativos a esses valores, você agora pode escrever um código de maneira clara: 
 
 ```
-my_apples + my_oranges
+minhas_maças + minhas_laranjas
 ```
 
 *** =instructions
-- Assign to `my_oranges` the value 6.
-- Add the variables `my_apples` and `my_oranges` and have R simply print the result.
-- Assign the result of adding `my_apples` and `my_oranges` to a new variable `my_fruit`.
+- Atribua a `minhas_laranjas` o valor 6.
+- Adicione as variáveis `minhas_maças` e `minhas_laranjas` e faça o R simplesmente imprimir o resultado.
+- Atribua o resultado da adição de `minhas_maças` e `minhas_laranjas` a uma nova variável `minhas_frutas`.
 
 *** =hint
-`my_fruit` is just the sum of `my_apples` and `my_oranges`. You can use the `+` operator to sum the two and `<-` to assign that value to the variable `my_fruit`.
+`minhas_frutas` é somente a soma de `minhas_maças` e `minhas_laranjas`. Você pode usar o operador `+` para a soma das duas e o `<-` para atribuir o valor à variável `minhas_frutas`.
 
 *** =pre_exercise_code
 ```{r}
@@ -251,39 +251,39 @@ my_apples + my_oranges
 
 *** =sample_code
 ```{r}
-# Assign a value to the variables my_apples and my_oranges
-my_apples <- 5
+# Atribua valores às variáveis minhas_maças e minhas_laranjas
+minhas_maças <- 5
 
 
-# Add these two variables together
+# Adicione estas duas variáveis
 
 
-# Create the variable my_fruit
+# Crie a variável minhas_frutas
 
 ```
 
 *** =solution
 ```{r}
-# Assign a value to the variables my_apples and my_oranges
-my_apples  <- 5
-my_oranges <- 6
+# Atribua valores às variáveis minhas_maças e minhas_laranjas
+minhas_maças <- 5
+minhas_laranjas <- 6
 
-# Add these two variables together
-my_apples + my_oranges
+# Adicione estas duas variáveis
+minhas_maças + minhas_laranjas
 
 # Create the variable my_fruit
-my_fruit <- my_apples + my_oranges
+minhas_frutas <- minhas_maças + minhas_laranjas
 ```
 
 *** =sct
 ```{r}
-test_object("my_apples", incorrect_msg = "Keep the line that assigns 5 to `my_apples`.")
-test_object("my_oranges", incorrect_msg = "Keep the line that assigns 6 to `my_oranges`.")
-test_output_contains("my_apples + my_oranges",
-                     incorrect_msg = "Make sure to print out the result of adding `my_apples` and `my_oranges`. The code example in the description already gives away the answer to this instruction!")
-msg <- "Have you used `my_fruit <- my_apples + my_oranges` to create the `my_fruit` variable?"
-test_object("my_fruit", undefined_msg = msg, incorrect_msg = msg)
-success_msg("Nice one! The great advantage of doing calculations with variables is reusability. If you just change `my_apples` to equal 12 instead of 5 and rerun the script, `my_fruit` will automatically update as well. Continue to the next exercise.")
+test_object("minhas_maças", incorrect_msg = "Mantenha a linha que atribui 5 a `minhas_maças`.")
+test_object("minhas_laranjas", incorrect_msg = "Mantenha a linha que atribui 6 a `minhas_laranjas`.")
+test_output_contains("minhas_maças + minhas_laranjas",
+                     incorrect_msg = "Certifique-se de imprimir o resultado da adição de `minhas_maças` e `minhas_laranjas`. O exemplo de código na descrição já entrega a resposta para esta instrução!")
+msg <- "Você usou `minhas_frutas <- minhas_maças + minhas_laranjas` para criar a variável `minhas_frutas`?"
+test_object("minhas_frutas", undefined_msg = msg, incorrect_msg = msg)
+success_msg("Boa! A grande vantagem de fazer cálculos com variáveis é a possibilidade de reutilização. Se você simplesmente troca `minhas_maças` para 12 no lugar de 5 e reexecuta o script, `minhas_frutas` será automaticamente atualizado também. Continue para o próximo exercício.")
 ```
 
 

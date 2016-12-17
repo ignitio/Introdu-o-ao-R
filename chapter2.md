@@ -160,74 +160,75 @@ success_msg("Muito bom! Veja o conteúdo dos vetores, lembre-se de você sempre 
 
 
 --- type:NormalExercise xp:100 skills:1 key:3b0b80b192
-## Naming a vector
+## Nomeando um vetor
 
-As a data analyst, it is important to have a clear view on the data that you are using. Understanding what each element refers to is therefore essential. 
+Como analista de dados, é importante ter uma visão clara dos dados que você esta usando. Portanto, entender ao que cada elemento se refere é essencial. 
 
-In the previous exercise, we created a vector with your winnings over the week. Each vector element refers to a day of the week but it is hard to tell which element belongs to which day. It would be nice if you could show that in the vector itself. 
+No exercício anterior, nós criamos um vetor com os seus ganhos no decorrer da semana. Cada elemento do vetor se refere a um dia da semana mas é difícil dizer qual elemento pertence a qual dia. Seria bom se você pudesse mostrar isso no próprio vetor.
 
-You can give a name to the elements of a vector with the `names()` function. Have a look at this example:
-
-```
-some_vector <- c("John Doe", "poker player")
-names(some_vector) <- c("Name", "Profession")
-```
-
-This code first creates a vector `some_vector` and then gives the two elements a name. The first element is assigned the name `Name`, while the second element is labeled `Profession`. Printing the contents to the console yields following output:
+Você pode dar nome aos elementos de um vetor com a função `names()`. Dê uma olhada neste exemplo:
 
 ```
-          Name     Profession 
-    "John Doe" "poker player" 
+algum_vetor <- c("João Ninguém", "jogador de poker")
+names(algum_vetor) <- c("Nome", "Profissão")
+```
+
+Este código primeiro cria o vetor `algum_vector` e então dá nomes aos dois elementos. Ao primeiro elemento é atribuído o nome `Nome`, ao passo que o segundo elemento é rotulado `Profissão`. Imprimir o conteúdo no console traz o seguinte resultado:
+
+```
+          Nome     Profissão 
+    "João Ninguém" "jogador de poker" 
 ```
 
 *** =instructions
-- The code on the right names the elements in `poker_vector` with the days of the week. Add code to do the same thing for `roulette_vector`.
+- O código ao lado nomeia os elementos no `vetor_poker` com os dias da semana. Adicione o código para fazer a mesma coisa para o `vetor_roleta`.
 
 *** =hint
-You can use `names(roulette_vector)` to set the names of the variable `roulette_vector`. Make sure to use the same vector with the days of the week as names. Remember that R is case sensitive!
+Você pode usar `names(vector_roleta)` para colocar nomes na variável `vetor_roleta`. Certifique-se de usar o mesmo vetor com os nomes dos dias da semana. Lembre-se que o R é sensível à caixa ALTA e baixa!
 
 *** =sample_code
 ```{r}
-# Poker winnings from Monday to Friday
-poker_vector <- c(140, -50, 20, -120, 240)
+# Ganhos no Poker de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
 
-# Roulette winnings from Monday to Friday
-roulette_vector <- c(-24, -50, 100, -350, 10)
+# Ganhos na Roleta de segunda a sexta
+vector_roleta <-  c(-24, -50, 100, -350, 10)
 
-# Assign days as names of poker_vector
-names(poker_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+# Atribua dias como nomes do vetor_poker
+names(vetor_poker) <- c("Segunda", "Terca", "Quarta", "Quinta", "Sexta")
 
-# Assign days as names of roulette_vectors
+# Atribua dias como nomes do vetor_roleta
 ```
 
 *** =solution
 ```{r}
-# Poker winnings from Monday to Friday
-poker_vector <- c(140, -50, 20, -120, 240)
 
-# Roulette winnings from Monday to Friday
-roulette_vector <- c(-24, -50, 100, -350, 10)
+# Ganhos no Poker de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
 
-# Assign days as names of poker_vector
-names(poker_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+# Ganhos na Roleta de segunda a sexta
+vector_roleta <-  c(-24, -50, 100, -350, 10)
 
-# Assign days as names of roulette_vectors
-names(roulette_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+# Atribua dias como nomes do vetor_poker
+names(vetor_poker) <- c("Segunda", "Terca", "Quarta", "Quinta", "Sexta")
+
+# Atribua dias como nomes do vetor_roleta
+names(vetor_roleta) <- c("Segunda", "Terca", "Quarta", "Quinta", "Sexta")
 ```
 
 *** =sct
 ```{r}
-test_object("poker_vector",
-            incorrect_msg = "Do not change the values inside `poker_vector`; they were already coded for you.")
-test_object("roulette_vector",
-            incorrect_msg = "Do not change the values inside `roulette_vector`; they were already coded for you.")
-test_object("poker_vector",
+test_object("vetor_poker",
+            incorrect_msg = "Não altere os valores dentro do `vector_poker`; eles já foram codificados por você.")
+test_object("vetor_roleta",
+            incorrect_msg = "Não altere os valores dentro do `vetor_roleta`; eles já foram codificados por você.")
+test_object("vetor_poker",
             eq_condition = "equal",
-            incorrect_msg = "Do not change the code that names the elements in `poker_vector`; focus on `roulette_vector`!")
-test_object("roulette_vector",
+            incorrect_msg = "Não altere o código que nomeia os elementos do `vetor_poker`; mantenha o foco no `vetor_roleta_vector`!")
+test_object("vetor_roleta",
             eq_condition = "equal",
-            incorrect_msg = "Make sure that you assign the correct names vector to `roulette_vector`. Use the exact same vector as the one that was used to name `poker_vector`.")
-success_msg("Well done! Continue to the next exercise.")
+            incorrect_msg = "Verifique se você atribuiu os nomes corretos ao `vetor_roleta`. Use exatamente o mesmo vetor que foi utilizado para nomear o `vetor_poker`.")
+success_msg("Muito bem! Continue para o próximo exercício.")
 ```
 
 

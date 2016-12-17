@@ -45,26 +45,26 @@ success_msg("Ótimo! Vá adiante para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:fd427db76f
-## Create a vector (2)
+## Crie um vetor (2)
 
-Let us focus first! 
+Vamos nos concentrar primeiro! 
 
-On your way from rags to riches, you will make extensive use of vectors. Vectors are one-dimension arrays that can hold numeric data, character data, or logical data. In other words, a vector is a simple tool to store data. For example, you can store your daily gains and losses in the casinos. 
+No seu caminho de pobreza à riqueza, você usará muitos vetores. Vetores são arrays unidimensionais que podem receber dados numéricos, dados em forma de caracteres ou dados lógicos. Em outras palavras, um vetor é uma ferramenta simples para armazenar dados. Por exemplo, você pode armazenar seus ganhos e suas perdas diárias nos cassinos. 
 
-In R, you create a vector with the combine function [`c()`](http://www.rdocumentation.org/packages/base/functions/c). You place the vector elements separated by a comma between the parentheses. For example:
+Em R, você pode criar um vetor com função combinar [`c()`](http://www.rdocumentation.org/packages/base/functions/c). Você coloca os elementos do vetor separados por vírgulas dentro dos parentesis. Pro exemplo:
 
 ```
-numeric_vector <- c(1, 2, 3)
-character_vector <- c("a", "b", "c")
+vetor_numerico <- c(1, 2, 3)
+vetor_caracteres <- c("a", "b", "c")
 ```
 
-Once you have created these vectors in R, you can use them to do calculations.
+Assim que você tenha criado estes vetores no R, pode utiliza-los para fazer cálculos
 
 *** =instructions 
-Complete the code such that `boolean_vector` contains the three elements: `TRUE`, `FALSE` and `TRUE` (in that order). 
+Complete o código de maneira que `vetor_booleano` contenha os três elementos: `TRUE`, `FALSE` e `TRUE` (nessa ordem). 
 
 *** =hint 
-Assign `c(TRUE, FALSE, TRUE)` to the variable `boolean_vector` with the `<-` operator.
+Atribua `c(TRUE, FALSE, TRUE)` à variável `vetor_booleano` com o operador `<-`.
 
 *** =pre_exercise_code
 ```{r}
@@ -73,89 +73,89 @@ Assign `c(TRUE, FALSE, TRUE)` to the variable `boolean_vector` with the `<-` ope
 
 *** =sample_code
 ```{r}
-numeric_vector <- c(1, 10, 49)
-character_vector <- c("a", "b", "c")
+vetor_numerico <- c(1, 10, 49)
+vetor_caracteres <- c("a", "b", "c")
 
-# Complete the code for boolean_vector
-boolean_vector <-
+# Complete o código para o vetor_booleano
+vector_booleano <-
 ```
 
 *** =solution
 ```{r}
-numeric_vector <- c(1, 10, 49)
-character_vector <- c("a", "b", "c")
+vetor_numerico <- c(1, 10, 49)
+vetor_caracteres <- c("a", "b", "c")
 
 # Complete the code for boolean_vector
-boolean_vector <- c(TRUE, FALSE, TRUE)
+vetor_booleano <- c(TRUE, FALSE, TRUE)
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change the code that defined `numeric_vector` and `character_vector`!"
-test_object("numeric_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("character_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("boolean_vector",
-            incorrect_msg = "Make sure that you assign the correct values to `boolean_vector`. Use `c(TRUE, FALSE, TRUE)`. Don't place quotes around `TRUE` and `FALSE`! Also, make sure to adopt the same order as listed in the instructions.")
-success_msg("Perfect! Notice that adding a space behind the commas in the `c()` function improves the readability of your code. Let's practice some more with vector creation in the next exercise.")
+msg <- "Não altere o código que definiu o `vetor_numerico` e o `vetor_caracteres`!"
+test_object("vetor_numerico", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_caracteres", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_booleano",
+            incorrect_msg = "Tenha certeza de que você atribuiu corretamente os valores ao `vetor_booleano`. Use `c(TRUE, FALSE, TRUE)`. Não coloque aspas em `TRUE` e `FALSE`! E também confira se você adotou a mesma ordem listada nas instruções.")
+success_msg("Perfeito! Note que adicionando espaço antes das virgulas na função `c()` melhora a legibilidade do seu código. Vamos praticar um pouco mais a criação de vetores no próximos exercício.")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:9f41229dbc
-## Create a vector (3)
+## Crie um vetor (3)
 
-After one week in Las Vegas and still zero Ferraris in your garage, you decide that it is time to start using your data analytical superpowers.
+Depois de uma semana em Las Vegas ainda sem nenhuma Ferrari na garagem, você decide que hora de começar a usar seus superpoderes de análise de dados.
 
-Before doing a first analysis, you decide to first collect all the winnings and losses for the last week: 
+Antes de fazer a primeira análise, você decide primeiro coletar todas os seus ganhos e suas perdas da última semana: 
 
-For `poker_vector`: 
+Para o `vetor_poker`: 
 
-- On Monday you won $140
-- Tuesday you lost $50
-- Wednesday you won $20 
-- Thursday you lost $120
-- Friday you won $240
+- Segunda-feira você ganhou $140
+- Terça-feira você perdeu $50
+- Quarta-ferira você ganhou $20 
+- Quinta-feira você perdeu $120
+- Sexta-feira você ganhou $240
 
-For `roulette_vector`: 
+Para o `vetor_roleta`:
 
-- On Monday you lost $24
-- Tuesday you lost $50
-- Wednesday you won $100
-- Thursday you lost $350
-- Friday you won $10
+- Segunda-feira você perdeu $24
+- Terça-feira você perdeu $50
+- Quarta-ferira você ganhou $100 
+- Quinta-feira você perdeu $350
+- Sexta-feira você ganhou $10
 
-You only played poker and roulette, since there was a delegation of mediums that occupied the craps tables. To be able to use this data in R, you decide to create the variables `poker_vector` and `roulette_vector`.
+Você só jogou poker e roleta, porque tinha uma delegação de mediums que ocupou as mesas de jogo de dados. Para poder usar estes dados no R, você decide criar as variáveis `vetor_poker` e `vetor_roleta`.
 
 *** =instructions
-Assign the winnings/losses for roulette to the variable `roulette_vector`.
+Atribua as perdas/ganhos na roleta à variável `vetor_roleta`.
 
 *** =hint
-To help you with this step, the editor already contains the code for creating `poker_vector`. Assign the correct values to `roulette_vector` based on the numbers in the assignment. Do not forget that losses are negative numbers.
+Para ajudá-lo com este passo, o editor já contem o código para o criar o `vetor_poker`. Atribua os valores corretos ao `vetor_roleta` baseado nos número do enunciado. Não esqueça que as perdas são números negativos.
 
 *** =sample_code
 ```{r}
-# Poker winnings from Monday to Friday
-poker_vector <- c(140, -50, 20, -120, 240)
+# Ganhos no Poker de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
 
-# Roulette winnings from Monday to Friday
-roulette_vector <-  
+# Ganhos na Roleta de segunda a sexta
+vector_roleta <-  
 ```
 
 *** =solution
 ```{r}
-# Poker winnings from Monday to Friday
-poker_vector <- c(140, -50, 20, -120, 240)
+# Ganhos no Poker de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
 
-# Roulette winnings from Monday to Friday
-roulette_vector <- c(-24, -50, 100, -350, 10)
+# Ganhos na Roleta de segunda a sexta
+vector_roleta <-  c(-24, -50, 100, -350, 10)
 ```
 
 *** =sct
 ```{r}
-test_object("poker_vector",
-            incorrect_msg = "Make sure that you assign the correct values to `poker_vector`.")
-test_object("roulette_vector",
-            incorrect_msg = "Make sure that you assign the correct values to `roulette_vector`. Make sure to adopt the correct order!")
-success_msg("Very good! To check out the contents of your vectors, remember that you can always simply type the variable in the console and hit Enter. Proceed to the next exercise!")
+test_object("vetor_poker",
+            incorrect_msg = "Confira se você atribuiu os valores corretos ao `vetor_poker`.")
+test_object("vector_roleta",
+            incorrect_msg = "Confira se você atribuiu os valores corretos ao `vetor_roleta`. Tenha certeza de que adotou a ordem correta!")
+success_msg("Muito bom! Veja o conteúdo dos vetores, lembre-se de você sempre pode simplesmente digitar a variável no console e apertar Enter. Passe para o próximo exercício!")
 ```
 
 

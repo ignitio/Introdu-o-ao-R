@@ -405,15 +405,15 @@ success_msg("Ótimo trabalho! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:99b549229d
-## What's that data type?
+## O que é um tipo de dado (data type)?
 
-Do you remember that when you added `5 + "six"`, you got an error due to a mismatch in data types? You can avoid such embarrassing situations by checking the data type of a variable beforehand. You can do this with the `class()` function, as the code on the right shows.
+Você lembra que quando somamos `5 + "seis"`, você recebeu uma mensagem de erro devido a uma incompatibilidade de tipos de dados (data types)? Você pode evitar tais situações embaraçosas conferindo de ante-mão o tipo de dado contido em uma variável.Você pode fazer isso com a função `class()`, como o código ao lado mostra.
 
 *** =instructions
-Complete the code in the editor and also print out the classes of `my_character` and `my_logical`. 
+Complete o código no editor e imprima no console as classes de `meu_texto` and `minha_logica`. 
 
 *** =hint
-The code that prints the data type of `my_numeric` is already included; do a similar things for `my_character` and `my_logical`. 
+O código que imprime o tipo de dado de `meu_numero` já está incluído; faça coisas similares para `meu_texto` e `minha_logica`. 
 
 *** =pre_exercise_code
 ```{r}
@@ -422,50 +422,51 @@ The code that prints the data type of `my_numeric` is already included; do a sim
 
 *** =sample_code
 ```{r}
-# Declare variables of different types
-my_numeric <- 42
-my_character <- "universe"
-my_logical <- FALSE 
+# Estabeleça variáveis de diferentes tipos
+meu_numero <- 42
+meu_texto <- "universo"
+minha_logica <- FALSE 
 
-# Check class of my_numeric
-class(my_numeric)
+# Confira a classe (tipo de dado) de meu_numero
+class(meu_numero)
 
-# Check class of my_character
+# Confira a classe (tipo de dado) de meu_texto
 
 
-# Check class of my_logical
+# Confira a classe (tipo de dado) de minha_logica
 
 ```
 
 *** =solution
 ```{r}
-# Declare variables of different types:
-my_numeric <- 42
-my_character <- "universe"
-my_logical <- FALSE
+# Estabeleça variáveis de diferentes tipos
+meu_numero <- 42
+meu_texto <- "universo"
+minha_logica <- FALSE 
 
-# Check class of my_numeric
-class(my_numeric)
 
-# Check class of my_character
-class(my_character)
+# Confira a classe (tipo de dado) de meu_numero
+class(meu_numero)
 
-# Check class of my_logical
-class(my_logical)
+# Confira a classe (tipo de dado) de meu_texto
+class(meu_texto)
+
+# Confira a classe (tipo de dado) de minha_logica
+class(minha_logica)
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change the declaration of the variables!"
-lapply(c("my_numeric", "my_character", "my_logical"), test_object, undefined_msg = msg, incorrect_msg = msg)
-patt <- "Have you included `class(%1$s)` to print out the data type of `%1$s`?"
-test_output_contains("class(my_numeric)",
-                     incorrect_msg = "Do not remove the code that prints out the type of `my_numeric`.")
-test_output_contains("class(my_character)",
-                     incorrect_msg = sprintf(patt, "my_character"))
-test_output_contains("class(my_logical)",
-                     incorrect_msg = sprintf(patt, "my_logical"))
-success_msg("Congratulations! This was the last exercise for this chapter. Head over to the next chapter to get immersed in the world of vectors!")
+msg <- "Não altere os valores atribuídos às variáveis!"
+lapply(c("meu_numero", "meu_texto", "minha_logica"), test_object, undefined_msg = msg, incorrect_msg = msg)
+patt <- "Você incluiu `class(%1$s)` para imprimir o tipo de dado de `%1$s`?"
+test_output_contains("class(meu_numero)",
+                     incorrect_msg = "Não remova o número que imprime o tipo de `meu_numero`.")
+test_output_contains("class(meu_texto)",
+                     incorrect_msg = sprintf(patt, "meu_texto"))
+test_output_contains("class(minha_logica)",
+                     incorrect_msg = sprintf(patt, "minha_logica"))
+success_msg("Parabéns! Este foi o último exercício deste capítulo. Vá para o próximo capítulo e mergulhe no mundo dos vetores!")
 ```
 
 

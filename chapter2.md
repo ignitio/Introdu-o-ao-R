@@ -1,7 +1,7 @@
 --- 
 title_meta  : Chapter 2
 title       : Vetores
-description : "Neste curso gratuito de R, nós levaremos você numa viagem a Las Vegas, onde você aprenderá a analisar os resultados das suas apostas utilizando vetores em R! Depois de completar este capítulo, você estará apto a criar vetores em R, nomea-los, selecionar elementos deles e compara-los com vetores diferentes."
+description : "Neste curso gratuito de R, nós levaremos você numa viagem a Las Vegas, onde você aprenderá a analisar os resultados das suas apostas utilizando vetores em R! Depois de completar este capítulo, você estará apto a criar vetores em R, nomeá-los, selecionar elementos deles e compará-los com vetores diferentes."
 
 --- type:NormalExercise xp:100 skills:1 key:d9b453dbdd
 ## Crie um vetor
@@ -11,12 +11,12 @@ Está se sentindo com sorte? Tomara que sim, porque este capítulo leva você nu
 Graças ao R e às suas novas habilidades de análise de dados, você aprenderá como aprimorar sua performance nas mesas de jogo e como incendiar sua carreira de apostador profissional. Este capítulo mostrará como você pode facilmente registrar o progresso de suas apostas e como você pode fazer algumas análises simples sobre as suas ações passadas. Próxima parada, Vegas Baby... VEGAS!!
 
 *** =instructions
-- Você ainda lembra do que aprendemos no primeiro capítulo? Atribua o valor `"Go!"` à variável `vegas`. Lembre-se: R é sensível à caixa ALTA ou baixa!
+- Você ainda lembra do que aprendemos no primeiro capítulo? Atribua o valor `"Vamos!"` à variável `vegas`. Lembre-se: R é sensível à caixa ALTA ou baixa!
 
 *** =hint
 Só digite a seguinte linha no editor:
 ```
-vegas <- "Go!"
+vegas <- "Vamos!"
 ```
 
 *** =pre_exercise_code
@@ -33,7 +33,7 @@ vegas <-
 *** =solution
 ```{r}
 # Defina a variável vegas
-vegas <- "Go!"
+vegas <- "Vamos!"
 ```
 
 *** =sct
@@ -51,14 +51,14 @@ Vamos nos concentrar primeiro!
 
 No seu caminho de pobreza à riqueza, você usará muitos vetores. Vetores são arrays unidimensionais que podem receber dados numéricos, dados em forma de caracteres ou dados lógicos. Em outras palavras, um vetor é uma ferramenta simples para armazenar dados. Por exemplo, você pode armazenar seus ganhos e suas perdas diárias nos cassinos. 
 
-Em R, você pode criar um vetor com função combinar [`c()`](http://www.rdocumentation.org/packages/base/functions/c). Você coloca os elementos do vetor separados por vírgulas dentro dos parentesis. Pro exemplo:
+Em R, você pode criar um vetor com função combinar [`c()`](http://www.rdocumentation.org/packages/base/functions/c). Você coloca os elementos do vetor separados por vírgulas dentro dos parênteses. Por exemplo:
 
 ```
 vetor_numerico <- c(1, 2, 3)
 vetor_caracteres <- c("a", "b", "c")
 ```
 
-Assim que você tenha criado estes vetores no R, pode utiliza-los para fazer cálculos
+Assim que você tenha criado estes vetores no R, pode utilizá-los para fazer cálculos
 
 *** =instructions 
 Complete o código de maneira que `vetor_booleano` contenha os três elementos: `TRUE`, `FALSE` e `TRUE` (nessa ordem). 
@@ -195,7 +195,7 @@ vetor_poker <- c(140, -50, 20, -120, 240)
 vector_roleta <-  c(-24, -50, 100, -350, 10)
 
 # Atribua dias como nomes do vetor_poker
-names(vetor_poker) <- c("Segunda", "Terca", "Quarta", "Quinta", "Sexta")
+names(vetor_poker) <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 
 # Atribua dias como nomes do vetor_roleta
 ```
@@ -210,10 +210,10 @@ vetor_poker <- c(140, -50, 20, -120, 240)
 vector_roleta <-  c(-24, -50, 100, -350, 10)
 
 # Atribua dias como nomes do vetor_poker
-names(vetor_poker) <- c("Segunda", "Terca", "Quarta", "Quinta", "Sexta")
+names(vetor_poker) <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 
 # Atribua dias como nomes do vetor_roleta
-names(vetor_roleta) <- c("Segunda", "Terca", "Quarta", "Quinta", "Sexta")
+names(vetor_roleta) <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 ```
 
 *** =sct
@@ -233,20 +233,20 @@ success_msg("Muito bem! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:6858c65a4a
-## Naming a vector (2)
+## Nomeando um vetor (2)
 
-If you want to become a good statistician, you have to become lazy. (If you are already lazy, chances are high you are one of those exceptional, natural-born statistical talents.)
+Se você quer se tornar um bom estatístico, você tem que se tornar preguiçoso. (Se você já é preguiçoso, há uma grande chance de você ser um daqueles excepcionais talentos natos para estatística.)
 
-In the previous exercises you probably experienced that it is boring and frustrating to type and retype information such as the days of the week. However, when you look at it from a higher perspective, there is a more efficient way to do this, namely, to assign the days of the week vector to a **variable**! 
+Nos exercícios anteriores você provavelmente sentiu que é chato frustrante digitar e redigitar informações como dias da semana. Contudo, quando você para isso de uma perspectiva mais ampla, há uma maneira mais eficiente de fazer isso, isto é, de atribuir um vetor de dias da semana a uma **variável**! 
 
-Just like you did with your poker and roulette returns, you can also create a variable that contains the days of the week. This way you can use and re-use it.
+Assim como fez com os resultados no poker e na roleta, você também pode criar uma variável que contenha os dias da semana. Assim você pode usá-la e reusá-la.
 
 *** =instructions
-- A variable `days_vector` that contains the days of the week has already been created for you.
-- Use `days_vector` to set the names of `poker_vector` and `roulette_vector`.
+- Uma variável `vetor_dias` que contem os dias da semana já foi criada para você.
+- Use o `vetor_dias` para atribuir nomes à `vetor_poker` e `vetor_roleta`.
 
 *** =hint
-You can use `names(poker_vector) <- days_vector` to set the names of the elements `poker_vector`. Do a similar thing for `roulette_vector`.
+Você pode usar `names(vetor_poker) <- vetor_dias` para atribuir nomes aos elementos do `vetor_poker`. Faça algo similar para o `vetor_roleta`.
 
 *** =pre_exercise_code
 ```{r}
@@ -255,67 +255,67 @@ You can use `names(poker_vector) <- days_vector` to set the names of the element
 
 *** =sample_code
 ```{r}
-# Poker winnings from Monday to Friday
-poker_vector <- c(140, -50, 20, -120, 240)
+# Ganhos no Poker de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
 
-# Roulette winnings from Monday to Friday
-roulette_vector <- c(-24, -50, 100, -350, 10)
+# Ganhos na Roleta de segunda a sexta
+vector_roleta <-  c(-24, -50, 100, -350, 10)
 
-# The variable days_vector
-days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+# A variável vetor_dias
+vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
  
-# Assign the names of the day to roulette_vector and poker_vector
-names(poker_vector) <-   
-names(roulette_vector) <-
+# Atribua os nomes dos dias ao vetor_roleta e ao vetor_poker
+names(vetor_poker) <-   
+names(vetor_roleta) <-
 ```
 
 *** =solution
 ```{r}
-# Poker winnings from Monday to Friday
-poker_vector <- c(140, -50, 20, -120, 240)
+# Ganhos no Poker de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
 
-# Roulette winnings from Monday to Friday
-roulette_vector <- c(-24, -50, 100, -350, 10)
+# Ganhos na Roleta de segunda a sexta
+vector_roleta <-  c(-24, -50, 100, -350, 10)
 
-# The variable days_vector
-days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+# A variável vetor_dias
+vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 
-# Assign the names of the day to roulette_vector and poker_vector
-names(poker_vector) <- days_vector
-names(roulette_vector) <- days_vector
+# Atribua os nomes dos dias ao vetor_roleta e ao vetor_poker
+names(vetor_poker) <- vetor_dias
+names(vetor_roleta) <- vetor_dias
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not changes the predefined variables `poker_vector`, `roulette_vector` or `days_vector`."
-test_object("poker_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("roulette_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
+msg <- "Não faça alterações nas variáveis pré-definidas `vetor_poker`, `vetor_roleta` ou `vetor_dias`."
+test_object("vetor_poker", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_roleta", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_dias", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("poker_vector",
+test_object("vetor_poker",
             eq_condition = "equal",
-            incorrect_msg = "Make sure that you assign `days_vector` to the names of `poker_vector`.")
-test_object("roulette_vector",
+            incorrect_msg = "Tenha certeza de que atribuiu o `vetor_dias` aos nomes do `vetor_poker`.")
+test_object("vetor_roleta",
             eq_condition = "equal",
-            incorrect_msg = "Make sure that you assign `days_vector` to the names of `roulette_vector`.")
-success_msg("Nice one! A word of advice: try to avoid code duplication at all times. Continue to the next exercise and learn how to do arithmetic with vectors!")
+            incorrect_msg = "Tenha certeza de que atribuiu o `vetor_dias` aos nomes do `vetor_roleta`.")
+success_msg("Boa! Um palavrinha: sempre tente evitar duplicação de código. Continue para o próximo exercício e aprenda como fazer aritmética com vetores!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:da995f099f
-## Calculating total winnings
+## Calculando os ganhos totais
 
-Now that you have the poker and roulette winnings nicely as named vectors, you can start doing some data analytical magic. 
+Agora que você os ganhos de poker e roleta armazenados corretamente como vetor nominados, você pode começar a fazer alguma análise de dados mágica. 
 
-You want to find out the following type of information:
+Você quer encontrar as seguintes informações:
 
-- How much has been your overall profit or loss per day of the week?
-- Have you lost money over the week in total?
-- Are you winning/losing money on poker or on roulette?
+- Qual tem sido o lucro ou a perda total por dia da semana?
+- Vocêm perdeu dinheiro no total da semana?
+- Você está ganhando/perdendo dinheiro no poker ou na roleta?
 
-To get the answers, you have to do arithmetic calculations on vectors. 
+Para conseguir estas respostas, você tem que fazer cálculos aritméticos com vetores. 
 
-It is important to know is that if you sum two vectors in R, it takes the element-wise sum. For example, the following three statements are completely equivalent:
+É importante saber que se soma dois vetores em R, ele faz a soma elemento a elemento. Por exemplo, os três It is important to know is that if you sum two vectors in R, it takes the element-wise sum. For example, the following three statements are completely equivalent:
 
 ```
 c(1, 2, 3) + c(4, 5, 6)

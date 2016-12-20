@@ -652,21 +652,21 @@ success_msg("Ótimo! O R também possibilita selecionar múltiplos elementos de 
 
 
 --- type:NormalExercise xp:100 skills:1 key:1351521670
-## Vector selection: the good times (2)
+## Seleção de vetores: bons tempos (2)
 
-How about analyzing your midweek results? 
+Que tal analisar os resultados do meio da semana? 
 
-To select multiple elements from a vector, you can add square brackets at the end of it. You can indicate between the brackets what elements should be selected. For example: suppose you want to select the first and the fifth day of the week: use the vector `c(1, 5)` between the square brackets. For example, the code below selects the first and fifth element of `poker_vector`:
+Para selecionar vários elementos de um vetor, voê pode colocar colchetes ao final dele. Você pode indicar entre os colchetes quais elementos devem ser selecionados. Por exemplo: suponha que voc queira selecionar o primeiro e o quinto dia da semana: use o vetor `c(1, 5)` entre colchetes. Por exemplo, o código abaixo seleciona o primeiro e o quinto elemento do `vetor_poker`:
 
 ```
-poker_vector[c(1, 5)]
+vetor_poker[c(1, 5)]
 ```
 
 *** =instructions
-Assign the poker results of Tuesday, Wednesday and Thursday to the variable `poker_midweek`.
+Atribua os resultados no poker de terça, quarta e quinta-feira à variável `poker_meio_de_semana`.
 
 *** =hint
-Use the vector `c(2, 3, 4)` between square brackets to select the correct elements of `poker_vector`.
+Use o vetor `c(2, 3, 4)` entre colchetes para selecionar os elementos corretos do `vetor_poker`. 
 
 *** =pre_exercise_code
 ```{r}
@@ -675,39 +675,39 @@ Use the vector `c(2, 3, 4)` between square brackets to select the correct elemen
 
 *** =sample_code
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
-poker_vector <- c(140, -50, 20, -120, 240)
-roulette_vector <- c(-24, -50, 100, -350, 10)
-days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-names(poker_vector) <- days_vector
-names(roulette_vector) <- days_vector
+# Ganhos no Poker e na Roleta de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
+vetor_roleta <-  c(-24, -50, 100, -350, 10)
+vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
+names(vetor_poker) <- vetor_dias
+names(vetor_roleta) <- vetor_dias
 
-# Define a new variable based on a selection
-poker_midweek <- 
+# Defina uma nova variável baseada em uma seleção
+poker_meio_de_semana <- 
 ```
 
 *** =solution
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
-poker_vector <- c(140, -50, 20, -120, 240)
-roulette_vector <- c(-24, -50, 100, -350, 10)
-days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-names(poker_vector) <- days_vector
-names(roulette_vector) <- days_vector
+# Ganhos no Poker e na Roleta de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
+vetor_roleta <-  c(-24, -50, 100, -350, 10)
+vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
+names(vetor_poker) <- vetor_dias
+names(vetor_roleta) <- vetor_dias
 
-# Define a new variable based on a selection
-poker_midweek <- poker_vector[c(2, 3, 4)]
+# Defina uma nova variável baseada em uma seleção
+poker_meio_de_semana <- vetor_poker[c(2, 3, 4)]
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
-test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("poker_midweek", 
-            incorrect_msg = "It looks like `poker_midweek` does not contain the correct values from `poker_vector`. You can use the vector `c(2, 3, 4)` inside square brackets.")
-success_msg("Well done! Continue to the next exercise to specialize in vector selection some more!");
+msg = "Não altere nada na definicão e na nomeação de `vetor_poker` e `vetor_roleta`."
+test_object("vetor_dias", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_roleta", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
+test_object("poker_meio_de_semana", 
+            incorrect_msg = "Parace que `poker_meio_de_semana` não contem os valores corretos extraídos de `vetor_poker`. Você pode usar o vetor `c(2, 3, 4)` dentro dos colchetes.")
+success_msg("Muito bem! Continue para o próximo exercício para aprofundar a especialização em seleção de vetor ainda mais!")
 ```
 
 

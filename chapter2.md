@@ -522,19 +522,19 @@ success_msg("Muito bem. Essa é uma notícia muito ruim...")
 
 
 --- type:NormalExercise xp:100 skills:1 key:f532f5332d
-## Comparing total winnings
+## Comparando ganhos totais
 
-Oops, it seems like you are losing money. Time to rethink and adapt your strategy! This will require some deeper analysis... 
+Oopa, parece que você está perdendo dinheiro. Está na hora de repensar e adaptar a sua estratégia! Isto vai demandar uma análise mais profunda... 
 
-After a short brainstorm in your hotel's jacuzzi, you realize that a possible explanation might be that your skills in roulette are not as well developed as your skills in poker. So maybe your total gains in poker are higher (or `>` ) than in roulette.
+Depois de um rápido brainstorm na jacuzzi do hotel, você percebe que uma possível explicação pode ser que as suas habilidades na roleta não sejam tão desenvolvidas quanto as suas habilidades no poker. Assim, talvez seus ganhos totais no poker sejam mais altos (ou `>` ) do que na roleta.
 
 *** =instructions
-- Calculate `total_poker` and `total_roulette` as in the previous exercise. Use the `sum()` function twice.
-- Check if your total gains in poker are higher than for roulette by using a comparison. Simply print out the result of this comparison. What do you conclude, should you focus on roulette or on poker?
+- Calcule `total_poker` e `total_roleta` como no exercício anterior. Use a função `sum()` duas vezes.
+- Confira se o total de ganhos no poker é maior alto que os da roleta usando uma comparação. Simplesmente imprima no console o resultado desta comparação. O que você conclui? Deveria focar na roleta ou no poker?
 
 *** =hint
-- You partly calculated the answer to this question in the previous exercise already!
-- To check if 6 is larger than 5, you type `6 > 5`. This returns a logical value (`TRUE` or `FALSE`).
+- Você já calculou parte desta resposta no exercício anterior!
+- Para confirir se 6 é maior que 5, digite `6 > 5`. Isto retorna um valor lógico (`TRUE` ou `FALSE`).
 
 *** =pre_exercise_code
 ```{r}
@@ -543,52 +543,52 @@ After a short brainstorm in your hotel's jacuzzi, you realize that a possible ex
 
 *** =sample_code
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
-poker_vector <- c(140, -50, 20, -120, 240)
-roulette_vector <- c(-24, -50, 100, -350, 10)
-days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-names(poker_vector) <- days_vector
-names(roulette_vector) <- days_vector
+# Ganhos no Poker e na Roleta de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
+vetor_roleta <-  c(-24, -50, 100, -350, 10)
+vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
+names(vetor_poker) <- vetor_dias
+names(vetor_roleta) <- vetor_dias
 
-# Calculate total gains for poker and roulette
-total_poker <-
-total_roulette <-
+# Ganhos totais com poker e roleta
+total_poker <- sum(vetor_poker)
+total_roleta <-  sum(vetor_roleta)
 
-# Check if you realized higher total gains in poker than in roulette 
+# Confira se você atingiu ganhos mais altos no poker do que na roleta 
 
 ```
 
 *** =solution
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
-poker_vector <- c(140, -50, 20, -120, 240)
-roulette_vector <- c(-24, -50, 100, -350, 10)
-days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-names(poker_vector) <- days_vector
-names(roulette_vector) <- days_vector
 
-# Calculate total gains for poker and roulette
-total_poker <- sum(poker_vector)
-total_roulette <- sum(roulette_vector)
+# Ganhos no Poker e na Roleta de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
+vetor_roleta <-  c(-24, -50, 100, -350, 10)
+vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
+names(vetor_poker) <- vetor_dias
+names(vetor_roleta) <- vetor_dias
 
-# Check if you realized higher total gains in poker than in roulette
-total_poker > total_roulette
+# Ganhos totais com poker e roleta
+total_poker <- sum(vetor_poker)
+total_roleta <-  sum(vetor_roleta)
+
+# Confira se você atingiu ganhos mais altos no poker do que na roleta 
+total_poker > total_roleta
 ```
 
 *** =sct
 ```{r}
-msg <- "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
-test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-
+msg = "Não altere nada na definicão e na nomeação de `vetor_poker` e `vetor_roleta`."
+test_object("vetor_dias", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_roleta", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("total_poker", 
-            incorrect_msg = "Make sure that you assign to `total_poker` the sum of the `poker_vector`. Use `sum()`.")
-test_object("total_roulette",
-            incorrect_msg = "Make sure that you assign to `total_roulette` the sum of the `roulette_vector`. Use `sum()`.")
-test_output_contains("total_poker > total_roulette",
-                     incorrect_msg = "Have you correctly carried out the comparison? To check if `total_poker` is greater than `total_roulette`, you can use `total_poker > total_roulette`.")
-success_msg("Good job! Continue to the next exercise.")
+            incorrect_msg = "Tenha certeza de que atribuiu a `total_poker` a soma de `vetor_poker`. Use `sum()`")
+test_object("total_roleta",
+            incorrect_msg = "Tenha certeza de que atribuiu a `total_roleta` a soma de `vetor_roleta`. Use `sum()`")
+test_output_contains("total_poker > total_roleta",
+                     incorrect_msg = "Você fez corretamente a comparação? Para conferir se `total_poker` é maior que `total_roleta`, você pode usar `total_poker > total_roleta`.")
+success_msg("Bom trabalho! Continue para o próximo exercício.")
 ```
 
 

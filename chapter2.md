@@ -593,19 +593,19 @@ success_msg("Bom trabalho! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:8d78be44e9
-## Vector selection: the good times
+## Seleção de vetores: bons tempos
 
-Your hunch seemed to be right. It appears that the poker game is more your cup of tea than roulette. 
+Sua intuição parece estar certa. Parece que poker é mais a sua praia do que roleta. 
 
-Another possible route for investigation is your performance at the beginning of the working week compared to the end of it. You did have a couple of Margarita cocktails at the end of the week... 
+Outra rota possível de investigaçao é a sua performance no início da semana comparada com o final dela. Você bebeu uma ou duas margaritas no final da semana...
 
-To answer that question, you only want to focus on a selection of the `total_vector`. In other words, our goal is to select specific elements of the vector. To select elements of a vector (and later matrices, data frames, ...), you can use square brackets. Between the square brackets, you indicate what elements to select. For example, to select the first element of the vector, you type `poker_vector[1]`. To select the second element of the vector, you type `poker_vector[2]`, etc. Notice that the first element in a vector has index 1, not 0 as in many other programming languages.
+Para responder esta questão, você só quer focar na seleção do `vetor_total`. Em outras palavras, nossa meta é selecionar elementos específicos no vetor. Para selecionar elementos de um vetor (e depois matrizes, data frames, ...), você pode usar colchetes. Entre os colchetes, você indica quais elementos quer selecionar. por exemplo, para selecionar o primeiro elemento de um vetor, você digita `vetor_poker[1]`. Para selecionar o segundo elemento do vetor, você digita `vetor_poker[2]`, etc. Note que o primeiro elemento em um vetor tem o índice 1, não 0 como em muitas outras linguagens de programação.
 
 *** =instructions
-Assign the poker results of Wednesday to the variable `poker_wednesday`.
+Atribuia os resultados de quarta-feira à variável `poker_quarta`.
 
 *** =hint
-Wednesday is the third element of `poker_vector`, and can thus be selected with `poker_vector[3]`.
+Quarta-feira é o terceiro elemento do `vetor_poker`, e assim pode ser selecionado com `vetor_poker[3]`.
 
 *** =pre_exercise_code
 ```{r}
@@ -614,40 +614,40 @@ Wednesday is the third element of `poker_vector`, and can thus be selected with 
 
 *** =sample_code
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
-poker_vector <- c(140, -50, 20, -120, 240)
-roulette_vector <- c(-24, -50, 100, -350, 10)
-days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-names(poker_vector) <- days_vector
-names(roulette_vector) <- days_vector
+# Ganhos no Poker e na Roleta de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
+vetor_roleta <-  c(-24, -50, 100, -350, 10)
+vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
+names(vetor_poker) <- vetor_dias
+names(vetor_roleta) <- vetor_dias
 
-# Define a new variable based on a selection
-poker_wednesday <- 
+# Defina uma nova variável baseada numa seleção
+poker_quarta <- 
 ```
 
 *** =solution
 ```{r}
-# Poker and roulette winnings from Monday to Friday:
-poker_vector <- c(140, -50, 20, -120, 240)
-roulette_vector <- c(-24, -50, 100, -350, 10)
-days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-names(poker_vector) <- days_vector
-names(roulette_vector) <- days_vector
+# Ganhos no Poker e na Roleta de segunda a sexta
+vetor_poker <- c(140, -50, 20, -120, 240)
+vetor_roleta <-  c(-24, -50, 100, -350, 10)
+vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
+names(vetor_poker) <- vetor_dias
+names(vetor_roleta) <- vetor_dias
 
-# Define a new variable based on a selection
-poker_wednesday <- poker_vector[3]
+# Defina uma nova variável baseada numa seleção
+poker_quarta <- vetor_poker[3]
 ```
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
-test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("poker_wednesday", 
-            undefined_msg = "Please make sure to define a variable `poker_wednesday`.",
-            incorrect_msg = "It looks like `poker_wednesday` does not contain the correct value of the `poker_vector`.")
-success_msg("Great! R also makes it possible to select multiple elements from a vector at once. Learn how in the next exercise!")
+msg = "Não altere nada na definicão e na nomeação de `vetor_poker` e `vetor_roleta`."
+test_object("vetor_dias", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
+test_object("vetor_roleta", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
+test_object("poker_quarta", 
+            undefined_msg = "Por favor certifique-se de definir a variável `poker_quarta`.",
+            incorrect_msg = "Parece que `poker_quarta` não contem o valor correto extraído de `vetor_poker`.")
+success_msg("Ótimo! O R também possibilita selecionar múltiplos elementos de um vetor de uma só vez. Aprenda como no próximo exercício!")
 ```
 
 

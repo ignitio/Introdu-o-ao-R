@@ -712,17 +712,17 @@ success_msg("Muito bem! Continue para o próximo exercício para aprofundar a es
 
 
 --- type:NormalExercise xp:100 skills:1 key:27976b79f4
-## Vector selection: the good times (3)
+## Selecão de vetores: bons tempos (3)
 
-Selecting multiple elements of `poker_vector` with `c(2, 3, 4)` is not very convenient. Many statisticians are lazy people by nature, so they created an easier way to do this: `c(2, 3, 4)` can be abbreviated to`2:4`, which generates a vector with all natural numbers from 2 up to 4.
+Selecionar vários elementos do `vetor_poker` com `c(2, 3, 4)` não é muito conveniente. Muitos estatísticos são pessoas preguiçosas por natureza, ento eles criaram uma maneira mais fácil de fazer isso: `c(2, 3, 4)` pode ser abreviado para `2:4`, que gera um vetor com todos os números naturais de 2 até 4.
 
-So, another way to find the mid-week results is `poker_vector[2:4]`. Notice how the vector `2:4` is placed between the square brackets to select element 2 up to 4.
+Assim, outra maneira de selecionar os resultados do meio da semana é `vetor_poker[2:4]`. Note como o vetor `2:4` é colocado entre colchetes para selecionar os elementos 2 a 4.
 
 *** =instructions
-Assign to `roulette_selection_vector` the roulette results from Tuesday up to Friday; make use of `:` if it makes things easier for you.
+Atribua a `vetor_seleto_roleta` os resultados da roleta de terça a sexta-feira; use `:` se isso facilita as coisas para você.
 
 *** =hint
-Assign a selection of `roulette_vector` to `roulette_selection_vector` by placing `2:5` between square brackets.
+Atribua a seleção de `vetor_roleta` a `vetor_seleto_roleta` colocando `2:5` entre colchetes.
 
 *** =sample_code
 ```{r}
@@ -733,8 +733,8 @@ vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 names(vetor_poker) <- vetor_dias
 names(vetor_roleta) <- vetor_dias
 
-# Define a new variable based on a selection
-roulette_selection_vector <- 
+# Defina uma nova variável baseada em uma seleção
+vetor_seleto_roleta <- 
 ```
 
 *** =solution
@@ -746,8 +746,8 @@ vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 names(vetor_poker) <- vetor_dias
 names(vetor_roleta) <- vetor_dias
 
-# Define a new variable based on a selection
-roulette_selection_vector <- roulette_vector[2:5]
+# Defina uma nova variável baseada em uma seleção
+vetor_seleto_roleta <- vetor_roleta[2:5]
 ```
 
 *** =sct
@@ -757,10 +757,10 @@ msg = "Não altere nada na definicão e na nomeação de `vetor_poker` e `vetor_
 test_object("vetor_dias", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_roleta", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("roulette_selection_vector", 
-            undefined_msg = "Please make sure to define a variable `roulette_selection_vector`.",
-            incorrect_msg = "It looks like `roulette_selection_vector` does not contain the correct selection from `roulette_vector`. Make sure to to use the right indexes.")
-success_msg("Awesome! The colon operator is extremely useful and very often used in R programming, so remember it well. Proceed to the next exercise.")
+test_object("vetor_seleto_roleta", 
+            undefined_msg = "Por favor verifique se est definida a variável `vetor_seleto_roleta`.", 
+            incorrect_msg = "Parece que `vetor_seleto_roleta` não contem a seleção correta extraída do `vetor_roleta`. Certifique-se de que usou os índices corretos.")
+success_msg("Fantástico! O operador dois pontos (`:`) é extremamente útil e é usado com muita frequência na programação em R, por isso deve ser lembrado. Passe ao próximo exercício.")
 ```
 
 

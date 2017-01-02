@@ -765,29 +765,28 @@ success_msg("Fantástico! O operador dois pontos (`:`) é extremamente útil e �
 
 
 --- type:NormalExercise xp:100 skills:1 key:e6c263ddee
-## Vector selection: the good times (4)
+## Selecão de vetores: bons tempos (4)
 
-Another way to tackle the previous exercise is by using the names of the vector elements (Monday, Tuesday, ...) instead of their numeric positions. For example, 
+Outra forma de resolver o exercício anterior é usar os nomes dos elementos do vetor (Segunda, Terça, ...) ao invés de suas posiçes numéricas. Por exemplo,
+```
+vetor_poker["Segunda"]
+```
+
+selecionará o primeiro elemento do `vetor_poker` uma que `"Segunda"` é o nome do primeiro elemento.
+
+Da mesma forma que você fez no exercício anterior com índices numéricos, pode também pode suar os nomes para selecionar múltiplos elementos, por exemplo:
 
 ```
-poker_vector["Monday"]
-```
-
-will select the first element of `poker_vector` since `"Monday"` is the name of that first element.
-
-Just like you did in the previous exercise with numerics, you can also use the element names to select multiple elements, for example: 
-
-```
-poker_vector[c("Monday","Tuesday")]
+vetor_poker[c("Segunda","Terça")]
 ```
 
 *** =instructions
-- Select the first three elements in `poker_vector` by using their names: `"Monday"`, `"Tuesday"` and `"Wednesday"`. Assign the result of the selection to `poker_start`.
-- Calculate the average of the values in `poker_start` with the [`mean()`](http://www.rdocumentation.org/packages/base/functions/mean) function. Simply print out the result so you can inspect it.
+- Selecione os primeiros três elementos do `vetor_poker` usando seus nomes: `"Segunda"`, `"Terça"` e `"Quarta"`. Atribua o resultado da seleção a `poker_inicio`.
+- Calcule a média dos valores em `poker_inicio` com a função [`mean()`](http://www.rdocumentation.org/packages/base/functions/mean). Simplesmente imprima o resultado no console para inspecioná-lo.
 
 *** =hint
-- You can use `c("Monday", "Tuesday", "Wednesday")` inside square brackets to subset `poker_vector` appropriately.
-- You can use `mean(poker_start)` to get the mean of the elements in `poker_start`. You do not need the mean of all poker elements, but only of the first three days.
+- Você pode usar `c("Segunda", "Terça", "Quarta")` dentro dos colchetes para subdividir o `vetor_poker` de forma adequada.
+- Você pode usar `mean(poker_inicio)` para conseguir a média dos elementos em `poker_inicio`. Você não precisa da média de todos os elementos de poker, mas somente dos três primeiros dias.
 
 *** =pre_exercise_code
 ```{r}
@@ -803,10 +802,10 @@ vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 names(vetor_poker) <- vetor_dias
 names(vetor_roleta) <- vetor_dias
 
-# Select poker results for Monday, Tuesday and Wednesday
-poker_start <- 
+# Selecione os resultados de poker para Segunda, Terça e Quarta
+poker_inicio <- 
   
-# Calculate the average of the elements in poker_start
+# Calcule a média dos elementos de poker_inicio
 
 ```
 
@@ -819,11 +818,11 @@ vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 names(vetor_poker) <- vetor_dias
 names(vetor_roleta) <- vetor_dias
 
-# Select poker results for Monday, Tuesday and Wednesday
-poker_start <- poker_vector[c("Monday", "Tuesday", "Wednesday")]
+# Selecione os resultados de poker para Segunda, Terça e Quarta
+poker_inicio <- vetor_poker[c("Segunda", "Terça", "Quarta")]
   
-# Calculate the average of the elements in poker_start
-mean(poker_start)
+# Calcule a média dos elementos de poker_inicio
+mean(poker_inicio)
 ```
 
 *** =sct
@@ -832,10 +831,10 @@ msg = "Não altere nada na definicão e na nomeação de `vetor_poker` e `vetor_
 test_object("vetor_dias", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_roleta", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("poker_start", 
-            incorrect_msg = "It looks like `poker_start` does not contain the first three values of `poker_vector`. You can use `c(\"Monday\", \"Tuesday\", \"Wednesday\")` inside square brackets to do this.")
-test_output_contains("mean(poker_start)", incorrect_msg = "Have you correctly calculated the average of the values in `poker_start` and printed it out? Use `mean(poker_start)`.")
-success_msg("Good job! Apart from subsetting vectors by index or by name, you can also subset vectors by comparison. The next exercises will show you how!");
+test_object("poker_inicio", 
+            incorrect_msg = "Parece que `poker_inicio` não contem os primeiros três valores do `vetor_poker`. Você pode usar `c(\"Segunda\", \"Terça\", \"Quarta\")` dentro dos colchetes para fazer isso.")
+test_output_contains("mean(poker_inicio)", incorrect_msg = "Você calculou corretamente a média dos valores de `poker_inicio` e imprimou o resultado? Use `mean(poker_inicio)`.")
+success_msg("Bom trabalho! Além de subdividir vetores com índices ou com nomes, você também pode fazer isso por comparação. O próximo exercício vai lhe mostrar como!");
 ```
 
 

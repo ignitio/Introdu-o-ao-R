@@ -839,34 +839,34 @@ success_msg("Bom trabalho! Além de subdividir vetores com índices ou com nomes
 
 
 --- type:NormalExercise xp:100 skills:1 key:f0f619c901
-## Selection by comparison - Step 1
+## Seleção por comparação - 1º Passo
 
-By making use of comparison operators, we can approach the previous question in a more proactive way. 
+Ao usar operadores de comparação, nós podemos abordar a questão anterior de forma mais proativa.
 
-The (logical) comparison operators known to R are:
+Os operadores (lógicos) de comparação conhecidos do R são:
 
-- `<` for less than
-- `>` for greater than
-- `<=` for less than or equal to
-- `>=` for greater than or equal to
-- `==` for equal to each other
-- `!=` not equal to each other
+- `<` para menor que
+- `>` para maior que
+- `<=` para menor ou igual a
+- `>=` para maior ou igual a
+- `==` para igual a
+- `!=` para diferente de
 
-As seen in the previous chapter, stating `6 > 5` returns `TRUE`. The nice thing about R is that you can use these comparison operators also on vectors. For example:
+Como vimos no capítulo anterior, submeter `6 > 5` retorna `TRUE`. Uma coisa legal do R é que você pode usar operadores de comparação também com vetores. Por exemplo:
 
 ```
 > c(4, 5, 6) > 5
 [1] FALSE FALSE TRUE
 ```
 
-This command tests for every element of the vector if the condition stated by the comparison operator is `TRUE` or `FALSE`.
+Este comando testa para cada elemento do vetor se a condição estabelecida pela comparação é `TRUE` ou `FALSE`.
 
 *** =instructions
-- Check which elements in `poker_vector` are positive (i.e. > 0) and assign this to `selection_vector`. 
-- Print out `selection_vector` so you can inspect it. The printout tells you whether you won (`TRUE`) or lost (`FALSE`) any money for each day.
+- Confira quais elementos no `vetor_poker` são positivos (isto é > 0) e atribua o resultado disso a `vetor_seleção`. 
+- Imprima o `vetor_seleção` para que possa inspecioná-lo. Os resultados impressos lhe dizem se você ganhou (`TRUE`) ou perdeu (`FALSE`) dinheiro a cada dia.
 
 *** =hint
-In order to check for which days your poker gains are positive, R should check for each element of `poker_vector` whether it is larger than zero. `some_vector > 0` is the way to tell R what you are after.
+Para conferir em quais dias os ganhos no poker são positivos, o R deveria conferir se cada elemento do `vetor_poker` é maior que zero. `algum_vetor > 0` é a forma de dizer ao R o que você está procurando.
 
 *** =pre_exercise_code
 ```{r}
@@ -882,10 +882,10 @@ vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 names(vetor_poker) <- vetor_dias
 names(vetor_roleta) <- vetor_dias
 
-# Which days did you make money on poker?
-selection_vector <- 
+# Em quais dias você ganhou dinheiro no poker?
+vetor_seleção <- 
   
-# Print out selection_vector
+# Imprima o vetor_seleção
 
 ```
 
@@ -898,11 +898,11 @@ vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 names(vetor_poker) <- vetor_dias
 names(vetor_roleta) <- vetor_dias
 
-# Which days did you make money on poker?
-selection_vector <- poker_vector > 0
+# Em quais dias você ganhou dinheiro no poker?
+vetor_seleção <- vetor_poker > 0
   
-# Print out selection_vector
-selection_vector
+# Imprima o vetor_seleção
+vetor_seleção
 ```
 
 *** =sct
@@ -912,32 +912,32 @@ test_object("vetor_dias", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_roleta", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("selection_vector", incorrect_msg = "It looks like `selection_vector` does not contain the correct result. Remember that R uses element wise operations for vectors.")
-test_output_contains("selection_vector", incorrect_msg = "Don't forget to print out `selection_vector` by writing the variable name on a new line.")
-success_msg("Great!")
+test_object("vetor_seleção", incorrect_msg = "Parece que o `vetor_seleção` não contem o restultado correto. Lembre-se que o R faz as operações com vetores elemento a elemento.")
+test_output_contains("vetor_seleção", incorrect_msg = "Não esqueça de imprimir o `vetor_seleção` escrevendo o nome da variável em uma nova linha.")
+success_msg("Ótimo!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:2754fc5cd4
-## Selection by comparison - Step 2
+## Seleção por comparação - 2º Passo
 
-Working with comparisons will make your data analytical life easier. Instead of selecting a subset of days to investigate yourself (like before), you can simply ask R to return only those days where you realized a positive return for poker. 
+Trabalhar com comparações facilitará a sua vida de analista de dados. Ao invés de selecionar um subconjunto de dias para você mesmo investigar (como antes), você pode simplesmente pedir ao R para retornar somente os dias em que você teve um retorno positivo no poker.
 
-In the previous exercises you used `selection_vector <- poker_vector > 0` to find the days on which you had a positive poker return. Now, you would like to know not only the days on which you won, but also how much you won on those days. 
+Na exercício anterior você usou `vetor_seleção <- vetor_poker > 0` para encontrar os dias em que você teve um retorno positivo no poker. Agora, você gostaria de saber não só os dias em que ganhou, mas também quanto ganhou nesses dias.
 
-You can select the desired elements, by putting `selection_vector` between the square brackets that follow `poker_vector`:
+Você pode selecionar os elementos desejados, colocando entre colchetes o `vetor_seleção` logo após o `vetor_poker`:
 
 ```
-poker_vector[selection_vector]
+vetor_poker[vetor_seleção]
 ```
 
-R knows what to do when you pass a logical vector in square brackets: it will only select the elements that correspond to `TRUE` in `selection_vector`.
+O R sabe o que fazer quando você passa um vetor lógico entre colchetes: ele irá selecionar somente os elementos que correspondem a `TRUE` no `vetor_seleção`.
 
 *** =instructions
-Use `selection_vector` in square brackets to assign the amounts that you won on the profitable days to the variable `poker_winning_days`.
+Use o `vetor_seleção` entre colchetes para atribuir as quantias que você ganhou nos dias de lucro à variável `dias_vitoriosos_poker`.
 
 *** =hint
-Use `poker_vector[selection_vector]` to select the desired elements from `poker_vector`, and assign the result to `poker_winning_days`.
+Use `vetor_poker[vetor_seleção]` para selecionar os elementos desejados de `vetor_poker`, e atribua o resultado a `dias_vitoriosos_poker`.
 
 *** =pre_exercise_code
 ```{r}
@@ -969,11 +969,11 @@ vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 names(vetor_poker) <- vetor_dias
 names(vetor_roleta) <- vetor_dias
 
-# Which days did you make money on poker?
-selection_vector <- poker_vector > 0
+# Em quais dias você ganhou dinheiro no poker?
+vetor_seleção <- vetor_poker > 0
 
-# Select from poker_vector these days
-poker_winning_days <- poker_vector[selection_vector]
+# Selecione estes dias de vetor_poker
+dias_vitoriosos_poker <- vetor_poker[vetor_seleção]
 ```
 
 *** =sct
@@ -982,10 +982,10 @@ msg = "Não altere nada na definicão e na nomeação de `vetor_poker` e `vetor_
 test_object("vetor_dias", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_roleta", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("selection_vector", incorrect_msg = "Don't change the way `selection_vector` is calculated.")
-test_object("poker_winning_days",
-            incorrect_msg =  "It looks like `poker_winning_days` does not contain the correct result. Use `poker_vector[selection_vector]`.")
-success_msg("Good job! Continue to the next exercise.")
+test_object("vetor_seleção", incorrect_msg = "Não altere a forma como `vetor_seleção` é calculado.")
+test_object("dias_vitoriosos_poker",
+incorrect_msg =  "Parece que `dias_vitoriosos_poker` não contem o resultado correto. Use `vetor_poker[vetor_seleção]`.")
+success_msg("Bom trabalho! Continue para o próximo exercício.")
 ```
 
 

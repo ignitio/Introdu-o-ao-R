@@ -132,7 +132,7 @@ success_msg("Ótimo! Siga adiante para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:5f200ffd43
-## Atribuição de variável 
+## Atribuição de Variável 
 
 Um conceito básico em programação (estatística) é chamado de **variável**. 
 

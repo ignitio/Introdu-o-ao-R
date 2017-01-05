@@ -288,7 +288,7 @@ success_msg("Boa! A grande vantagem de fazer cálculos com variáveis é a possi
 
 
 --- type:NormalExercise xp:100 skills:1 key:915fcc7c99
-## bananas e Laranjas
+## Bananas e Laranjas
 
 O senso comum diz que você não soma bananas e laranjas. Mas olha só, foi isso que você acabou de fazer, né :-)? As variáveis `minhas_bananas` e `minhas_laranjas` continham um número cada uma no exercício anterior. O operador `+` funciona com variáveis numéricas no R. Se você realmente tentasse somar "bananas" e "laranjas", e atribuisse um texto à variável `minhas_laranjas` (veja no editor), você estaria tentando atribuir a adição de um variável numérica com uma variável de texto (character) à variável `minhas_frutas`. Isto não é possível.
 

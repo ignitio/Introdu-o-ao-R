@@ -990,16 +990,16 @@ success_msg("Bom trabalho! Continue para o próximo exercício.")
 
 
 --- type:NormalExercise xp:100 skills:1 key:59e8dcbbd5
-## Advanced selection
+## Seleção Avançada
 
-Just like you did for poker, you also want to know those days where you realized a positive return for roulette.
+Assim como você fez no poker, você também pode querer saber em quais você teve um retorno positivo na roleta.
 
 *** =instructions
-- Create the variable `selection_vector`, this time to see if you made profit with roulette for different days.
-- Assign the amounts that you made on the days that you ended positively for roulette to the variable `roulette_winning_days`. This vector thus contains the positive winnings of `roulette_vector`.
+- Crie a variável `vetor_seleção`, desta vez para ver se você teve lucro na roleta em dias diferentes.
+- Atribua os valores que você ganhou nos dias que você teve resultado positivo na roleta à variável `dias_vitoriosos_roleta`. Este vetor contem os ganhos positivos do `vetor_roleta`.
 
 *** =hint
-Once you've correctly calculated `selection_vector`, you can again use `roulette_vector[selection_vector]` to select the positive results from `roulette_vector`.
+Uma vez que você tenha calculado corretamente o `vetor_seleção`, você pode usar novamente `vetor_roleta[vetor_seleção]` para selecionar os resultados positivos do `vetor_roleta`.
 
 *** =pre_exercise_code
 ```{r}
@@ -1015,11 +1015,11 @@ vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 names(vetor_poker) <- vetor_dias
 names(vetor_roleta) <- vetor_dias
 
-# Which days did you make money on roulette?
-selection_vector <-
+# Em quais dias você ganhou dinheiro na roleta?
+vetor_seleção <-
 
-# Select from roulette_vector these days
-roulette_winning_days <- 
+# Selecione estes dias do vetor_roleta
+dias_vitoriosos_roleta <- 
 ```
 
 *** =solution
@@ -1031,11 +1031,11 @@ vetor_dias <- c("Segunda", "Terça", "Quarta", "Quinta", "Sexta")
 names(vetor_poker) <- vetor_dias
 names(vetor_roleta) <- vetor_dias
 
-# Which days did you make money on roulette?
-selection_vector <- roulette_vector > 0
+# Em quais dias você ganhou dinheiro na roleta?
+vetor_seleção <- vetor_roleta > 0
 
-# Select from roulette_vector these days
-roulette_winning_days <- roulette_vector[selection_vector]
+# Selecione estes dias do vetor_roleta
+dias_vitoriosos_roleta <-  vetor_roleta[vetor_seleção]
 ```
 
 *** =sct
@@ -1045,11 +1045,11 @@ test_object("vetor_dias", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_poker", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("vetor_roleta", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("selection_vector", 
-            incorrect_msg = "It looks like `selection_vector` does not contain the correct result. Use `roulette_vector > 0`.")
+            incorrect_msg = "Parece que o `vetor_seleção` não contem o resultado correto. Use `vetor_roleta > 0`.")
 test_object("roulette_winning_days",
-            incorrect_msg = "It looks like `roulette_winning_days` does not contain the correct result. Use `roulette_vector[selection_vector]`.")
+            incorrect_msg = "Parece que `dias_vitoriosos_roleta` não contem o resultado correto. Use `vetor_roleta[vetor_seleção]`.")
 
-success_msg("Great! This exercise concludes the chapter on vectors. The next chapter will introduce you to the two-dimensional version of vectors: matrices.")
+success_msg("Ótimo! Este exercício encerra o capítulo sobre vetores. O próximo capítulo apresentará a você uma versão bidimensional dos vetores: as matrizes.")
 ```
 
 
